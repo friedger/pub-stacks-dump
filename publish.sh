@@ -1,8 +1,25 @@
-/home/friedger/_repos/github/friedger/pub-stacks-dump
+#!/bin/bash
+timestamp=$(date -u)
+cd /home/friedger/_repos/github/friedger/pub-stacks-dump
 cd ../../psq/stacks-dump
 node report /tmp/stacks-testnet-895e46fd342bf290/ -a > ../../friedger/pub-stacks-dump/stacks-dump.txt
 cd ../../friedger/pub-stacks-dump
-timestamp=$(date +%c)
+cat > header.html <<EOF
+<html>
+<title>Stacks Dump</title>
+<body>
+<h1>Stacks Dump</h1>
+taken at $timestamp
+<pre>
+EOF
+cat header.html stacks-dump.txt > index.html
+cat >> index.html <<EOF
+</pre>
+</body>
+</html>
+EOF
+rm header.html
+
 git add .
 git commit -m "Published at: $timestamp"
 git push origin main
