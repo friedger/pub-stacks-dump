@@ -10,6 +10,9 @@ cat > header.html <<EOF
 <body>
 <h1>Stacks Dump</h1>
 taken at $timestamp
+<br/>
+Read more at <a href="https://github.com/psq/stacks-dump">git repo for stacks-dump</a> and 
+at <a href="https://github.com/friedger/pub-stacks-dump">git repo for pub-stacks-dump</a>. 
 <pre>
 EOF
 cat header.html stacks-dump.txt > index.html
