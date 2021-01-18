@@ -6,7 +6,14 @@ node report /tmp/stacks-testnet-895e46fd342bf290/ -a > ../../friedger/pub-stacks
 cd ../../friedger/pub-stacks-dump
 cat > header.html <<EOF
 <html>
+<head>
 <title>Stacks Dump</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {background-color: #5546FF; color:#EEE;}
+pre {background-color: #000; padding: 4px;
+</style>
+</head>
 <body>
 <h1>Stacks Dump</h1>
 taken at $timestamp
@@ -23,8 +30,6 @@ cat >> index.html <<EOF
 EOF
 rm header.html
 
-eval "$(ssh-agent -s)"
-ssh-add -K ~/.ssh/id_rsa
 git add .
 git commit -m "Published at: $timestamp"
 git push origin main
