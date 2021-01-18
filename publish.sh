@@ -9,6 +9,8 @@ cat > header.html <<EOF
 <head>
 <title>Stacks Dump</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5546FF" />
+<meta name="description" content="A public view of statistics around the Stacks blockchain, published hourly using stacks-dump." />
 <style>
 body {background-color: #5546FF; color:#EEE; font-family: sans-serif;}
 pre {background-color: #000; padding: 4px; overflow:auto;}
@@ -16,6 +18,7 @@ pre {background-color: #000; padding: 4px; overflow:auto;}
 </head>
 <body>
 <h1>Stacks Dump</h1>
+<p>A public view of statistics around the Stacks blockchain, published hourly using stacks-dump.</p>
 taken at $timestamp
 <br/>
 Read more at <a href="https://github.com/psq/stacks-dump">git repo for stacks-dump</a> and 
