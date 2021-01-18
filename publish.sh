@@ -10,7 +10,7 @@ cat > header.html <<EOF
 <title>Stacks Dump</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body {background-color: #5546FF; color:#EEE;}
+body {background-color: #5546FF; color:#EEE; font-family: sans-serif;}
 pre {background-color: #000; padding: 4px; overflow:auto;}
 </style>
 </head>
