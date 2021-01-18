@@ -23,6 +23,8 @@ cat >> index.html <<EOF
 EOF
 rm header.html
 
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
 git add .
 git commit -m "Published at: $timestamp"
 git push origin main
