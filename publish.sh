@@ -27,6 +27,10 @@ dir_stacksdump="/home/friedger/_repos/github/psq/stacks-dump"
 dir_publish="/home/friedger/_repos/github/friedger/pub-stacks-dump"
 # file name for saving stacks-node data
 file_output="stacks-dump.txt"
+# website to access data after published
+website="https://friedger.github.io/pub-stacks-dump/"
+# twitter account used for twitter card in SEO
+twitter="@fmdroid"
 
 ##########
 # SCRIPT #
@@ -60,8 +64,8 @@ cat > header.html <<EOF
 <!-- OG:DATA -->
 <meta property="og:title" content="Stacks Dump" />
 <meta property="og:description" content="A public view of statistics around the Stacks blockchain, published hourly using stacks-dump." />
-<meta property="og:image" content="https://friedger.github.io/pub-stacks-dump/stacks-dump-truck.png" />
-<meta property="og:image:secure_url" content="https://friedger.github.io/pub-stacks-dump/stacks-dump-truck.png" />
+<meta property="og:image" content="$website/logo/stacks-dump-truck-trans.png" />
+<meta property="og:image:secure_url" content="$website/logo/stacks-dump-truck-trans.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="512" />
 <meta property="og:image:height" content="340" />
@@ -71,15 +75,15 @@ cat > header.html <<EOF
 <meta property="og:locale" content="ALL_ALL" />
 <!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@fmdroid">
+<meta name="twitter:site" content="$twitter">
 <meta name="twitter:description" content="A public view of statistics around the Stacks blockchain, published hourly using stacks-dump.">
 <meta name="twitter:title" content="Stacks Dump">
-<meta name="twitter:image" content="https://friedger.github.io/pub-stacks-dump/stacks-dump-truck.png">
+<meta name="twitter:image" content="$website/logo/stacks-dump-truck-trans.png">
 <meta name="twitter:image:alt" content="The stacks dump truck.">
 <style>
 body {
   background-color: black;
-  color:black;
+  color: black;
   font-family: sans-serif;
   padding: 0;
   margin: 0;
