@@ -58,7 +58,8 @@ node report "$__stacksnode" -a > "$__publishdir"/"$__outputfile"
 # Build web page with stacks-dump data
 cd "$__publishdir" || exit
 cat > header.html <<EOF
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>Stacks Dump</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
