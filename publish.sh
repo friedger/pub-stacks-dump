@@ -1,9 +1,55 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# This script will run stacks-dump against
+# an active stacks-node miner's data and
+# output the results to a web page that
+# is uploaded to GitHub and published via
+# GitHub Pages.
+
+########
+# INIT #
+########
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+# timestamp in UTC
 timestamp=$(date -u)
-cd /home/friedger/_repos/github/friedger/pub-stacks-dump
-cd ../../psq/stacks-dump
-node report /tmp/stacks-testnet-bb8423eafa69dc8f/ -a > ../../friedger/pub-stacks-dump/stacks-dump.txt
-cd ../../friedger/pub-stacks-dump
+
+## UPDATE VARIABLES BELOW FOR YOUR SYSTEM
+
+# directory for working_dir data from stacks-node
+dir_stacksnode="/tmp/stacks-testnet-bb8423eafa69dc8f/"
+# directory for running stacks-dump
+dir_stacksdump="/home/friedger/_repos/github/psq/stacks-dump"
+# directory for repo to publish results
+dir_publish="/home/friedger/_repos/github/friedger/pub-stacks-dump"
+# file name for saving stacks-node data
+file_output="stacks-dump.txt"
+
+##########
+# SCRIPT #
+##########
+
+# Verify all directories exist before starting
+if [ ! -d "$dir_stacksnode" ]; then
+  printf "stacks-node working directory not found, please check the variable in the script."
+  exit
+elif [ ! -d "$dir_stacksdump" ]; then
+  printf "stacks-dump directory not found, please check the variable in the script or download from GitHub.\n\nhttps://github.com/psq/stacks-dump"
+  exit
+elif [ ! -d "$dir_publish" ]; then
+  printf "publishing directory not found, please check the variable in the script."
+  exit
+fi
+
+# Run stacks-dump and save output to file
+cd "$dir_stacksdump" || exit
+node report "$dir_stacksnode" -a > "$dir_publish"/"$file_output"
+
+# Build web page with stacks-dump data
+cd "$dir_publish" || exit
 cat > header.html <<EOF
 <html>
 <head>
@@ -82,6 +128,7 @@ cat >> index.html <<EOF
 EOF
 rm header.html
 
+# upload and publish via git
 git add .
 git commit -m "Published at: $timestamp"
 git push origin main
