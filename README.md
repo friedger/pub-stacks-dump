@@ -10,6 +10,8 @@ The information is published via GitHub pages and available at the link below:
 
 This script *should* run on any system that supports Bash. Please file an issue if you get an error.
 
+This script expects that you have `git` installed and configured on your system.
+
 This script relies on [stacks-dump by psq](https://github.com/psq/stacks-dump) to review the stacks-node storage and output statistics based on the miner's data. The `stacks-dump` repository must be downloaded separately.
 
 This script has a set of variables that need to be updated to match your system configuration:
