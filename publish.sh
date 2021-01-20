@@ -18,7 +18,7 @@ set -o nounset
 __timestamp=$(date -u)
 
 # read input for loop (optional)
-__action="${1:-}"
+__sleeptime="${1:-}"
 
 ## UPDATE VARIABLES BELOW FOR YOUR SYSTEM
 
@@ -51,7 +51,7 @@ elif [ ! -d "$__publishdir" ]; then
   exit
 fi
 
-if [ "$__action" == "" ]; then 
+if [ "$__sleeptime" == "" ]; then 
   publish
   exit
 else
@@ -59,6 +59,7 @@ else
   do
     __timestamp=$(date -u)
     publish
+    sleep "$__sleeptime"
     printf "Published at: %s", "$__timestamp"
   done
 fi
