@@ -74,8 +74,8 @@ cat > header.html <<EOF
 <meta property="og:image" content="$__website/logo/stacks-dump-truck-trans.png" />
 <meta property="og:image:secure_url" content="$__website/logo/stacks-dump-truck-trans.png" />
 <meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="512" />
-<meta property="og:image:height" content="340" />
+<meta property="og:image:width" content="250" />
+<meta property="og:image:height" content="166" />
 <meta property="og:image:alt" content="The stacks dump truck." />
 <meta property="og:site_name" content="Stacks Dump" />
 <meta property="og:type" content="__website" />
