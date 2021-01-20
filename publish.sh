@@ -131,7 +131,7 @@ body {
 </div>
 <pre class="stacks-dump">
 EOF
-cat header.html stacks-dump.txt > index.html
+cat header.html "$__outputfile" > index.html
 cat >> index.html <<EOF
 </pre>
 </body>
@@ -159,4 +159,3 @@ else
     printf "Published at: %s", "$__timestamp"
   done
 fi
-
