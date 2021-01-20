@@ -51,6 +51,20 @@ elif [ ! -d "$__publishdir" ]; then
   exit
 fi
 
+if [ "$__action" == "" ]; then 
+  publish
+  exit
+else
+  while true
+  do
+    __timestamp=$(date -u)
+    publish
+    printf "Published at: %s", "$__timestamp"
+  done
+fi
+
+function publish() {
+
 # Run stacks-dump and save output to file
 cd "$__stacksdump" || exit
 node report "$__stacksnode" -a > "$__publishdir"/"$__outputfile"
@@ -140,3 +154,5 @@ rm header.html
 git add .
 git commit -m "Published at: $__timestamp"
 git push origin main
+
+}
