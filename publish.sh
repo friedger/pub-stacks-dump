@@ -15,45 +15,48 @@ set -o pipefail
 set -o nounset
 
 # timestamp in UTC
-timestamp=$(date -u)
+__timestamp=$(date -u)
+
+# read input for loop (optional)
+__action="${1:-}"
 
 ## UPDATE VARIABLES BELOW FOR YOUR SYSTEM
 
 # directory for working_dir data from stacks-node
-dir_stacksnode="/tmp/stacks-testnet-bb8423eafa69dc8f/"
+__stacksnode="/tmp/stacks-testnet-bb8423eafa69dc8f/"
 # directory for running stacks-dump
-dir_stacksdump="/home/friedger/_repos/github/psq/stacks-dump"
+__stacksdump="/home/friedger/_repos/github/psq/stacks-dump"
 # directory for repo to publish results
-dir_publish="/home/friedger/_repos/github/friedger/pub-stacks-dump"
+__publishdir="/home/friedger/_repos/github/friedger/pub-stacks-dump"
 # file name for saving stacks-node data
-file_output="stacks-dump.txt"
+__outputfile="stacks-dump.txt"
 # website to access data after published
-website="https://friedger.github.io/pub-stacks-dump/"
+__website="https://friedger.github.io/pub-stacks-dump/"
 # twitter account used for twitter card in SEO
-twitter="@fmdroid"
+__twitter="@fmdroid"
 
 ##########
 # SCRIPT #
 ##########
 
 # Verify all directories exist before starting
-if [ ! -d "$dir_stacksnode" ]; then
+if [ ! -d "$__stacksnode" ]; then
   printf "stacks-node working directory not found, please check the variable in the script."
   exit
-elif [ ! -d "$dir_stacksdump" ]; then
+elif [ ! -d "$__stacksdump" ]; then
   printf "stacks-dump directory not found, please check the variable in the script or download from GitHub.\n\nhttps://github.com/psq/stacks-dump"
   exit
-elif [ ! -d "$dir_publish" ]; then
+elif [ ! -d "$__publishdir" ]; then
   printf "publishing directory not found, please check the variable in the script."
   exit
 fi
 
 # Run stacks-dump and save output to file
-cd "$dir_stacksdump" || exit
-node report "$dir_stacksnode" -a > "$dir_publish"/"$file_output"
+cd "$__stacksdump" || exit
+node report "$__stacksnode" -a > "$__publishdir"/"$__outputfile"
 
 # Build web page with stacks-dump data
-cd "$dir_publish" || exit
+cd "$__publishdir" || exit
 cat > header.html <<EOF
 <html>
 <head>
@@ -64,21 +67,21 @@ cat > header.html <<EOF
 <!-- OG:DATA -->
 <meta property="og:title" content="Stacks Dump" />
 <meta property="og:description" content="A public view of statistics around the Stacks blockchain, published hourly using stacks-dump." />
-<meta property="og:image" content="$website/logo/stacks-dump-truck-trans.png" />
-<meta property="og:image:secure_url" content="$website/logo/stacks-dump-truck-trans.png" />
+<meta property="og:image" content="$__website/logo/stacks-dump-truck-trans.png" />
+<meta property="og:image:secure_url" content="$__website/logo/stacks-dump-truck-trans.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="512" />
 <meta property="og:image:height" content="340" />
 <meta property="og:image:alt" content="The stacks dump truck." />
 <meta property="og:site_name" content="Stacks Dump" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="__website" />
 <meta property="og:locale" content="ALL_ALL" />
 <!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="$twitter">
+<meta name="twitter:site" content="$__twitter">
 <meta name="twitter:description" content="A public view of statistics around the Stacks blockchain, published hourly using stacks-dump.">
 <meta name="twitter:title" content="Stacks Dump">
-<meta name="twitter:image" content="$website/logo/stacks-dump-truck-trans.png">
+<meta name="twitter:image" content="$__website/logo/stacks-dump-truck-trans.png">
 <meta name="twitter:image:alt" content="The stacks dump truck.">
 <style>
 body {
@@ -119,7 +122,7 @@ body {
 <div class="header">
   <h1>Stacks Dump</h1>
   <p>A public view of statistics around the Stacks blockchain, published hourly using stacks-dump.</p>
-  <p>Taken at: $timestamp</p>
+  <p>Taken at: $__timestamp</p>
   <p>Read more at <a href="https://github.com/psq/stacks-dump">git repo for stacks-dump</a> and at <a href="https://github.com/friedger/pub-stacks-dump">git repo for pub-stacks-dump</a>.</p>
 </div>
 <pre class="stacks-dump">
@@ -134,5 +137,5 @@ rm header.html
 
 # upload and publish via git
 git add .
-git commit -m "Published at: $timestamp"
+git commit -m "Published at: $__timestamp"
 git push origin main
