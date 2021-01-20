@@ -15,7 +15,7 @@ set -o pipefail
 set -o nounset
 
 # timestamp in UTC
-__timestamp=$(date -u)
+__timestamp=$(date -u +"%Y%m%d-%H%M%S")
 
 # read input for loop (optional)
 __sleeptime="${1:-}"
@@ -57,7 +57,7 @@ if [ "$__sleeptime" == "" ]; then
 else
   while true
   do
-    __timestamp=$(date -u)
+    __timestamp=$(date -u +"%Y%m%d-%H%M%S")
     publish
     sleep "$__sleeptime"
     printf "Published at: %s", "$__timestamp"
