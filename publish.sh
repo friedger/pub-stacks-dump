@@ -67,6 +67,7 @@ function publish() {
 
 # Run stacks-dump and save output to file
 cd "$__stacksdump" || exit
+git pull
 node report "$__stacksnode" -a > "$__publishdir"/"$__outputfile"
 
 # Build web page with stacks-dump data
