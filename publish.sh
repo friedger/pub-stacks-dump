@@ -51,19 +51,6 @@ elif [ ! -d "$__publishdir" ]; then
   exit
 fi
 
-if [ "$__sleeptime" == "" ]; then 
-  publish
-  exit
-else
-  while true
-  do
-    __timestamp=$(date -u +"%Y%m%d-%H%M%S")
-    publish
-    sleep "$__sleeptime"
-    printf "Published at: %s", "$__timestamp"
-  done
-fi
-
 function publish() {
 
 # Run stacks-dump and save output to file
@@ -158,3 +145,18 @@ git commit -m "Published at: $__timestamp"
 git push origin main
 
 }
+
+
+if [ "$__sleeptime" == "" ]; then 
+  publish
+  exit
+else
+  while true
+  do
+    __timestamp=$(date -u +"%Y%m%d-%H%M%S")
+    publish
+    sleep "$__sleeptime"
+    printf "Published at: %s", "$__timestamp"
+  done
+fi
+
