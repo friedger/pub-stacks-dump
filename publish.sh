@@ -23,7 +23,8 @@ __sleeptime="${1:-}"
 ## UPDATE VARIABLES BELOW FOR YOUR SYSTEM
 
 # directory for working_dir data from stacks-node
-__stacksnode="/tmp/stacks-testnet-bb8423eafa69dc8f/"
+__stacksnode="/tmp/stacks-testnet-741ab79e4432abf8/"
+
 # directory for running stacks-dump
 __stacksdump="/home/friedger/_repos/github/psq/stacks-dump"
 # directory for repo to publish results
