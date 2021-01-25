@@ -31,6 +31,8 @@ __stacksdump="/home/friedger/_repos/github/psq/stacks-dump"
 __publishdir="/home/friedger/_repos/github/friedger/pub-stacks-dump"
 # file name for saving stacks-node data
 __outputfile="stacks-dump.txt"
+# file name for saving stacks-node data as json
+__outputjsonfile="stacks-dump.json"
 # website to access data after published
 __website="https://friedger.github.io/pub-stacks-dump/"
 # twitter account used for twitter card in SEO
@@ -58,6 +60,7 @@ function publish() {
 cd "$__stacksdump" || exit
 git pull
 node report "$__stacksnode" -a > "$__publishdir"/"$__outputfile"
+node report "$__stacksnode" -j > "$__publishdir"/"$__outputjsonfile"
 
 # Build web page with stacks-dump data
 cd "$__publishdir" || exit
@@ -148,7 +151,7 @@ git push origin main
 }
 
 
-if [ "$__sleeptime" == "" ]; then 
+if [ "$__sleeptime" == "" ]; then
   publish
   exit
 else
