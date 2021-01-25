@@ -60,7 +60,7 @@ function publish() {
 cd "$__stacksdump" || exit
 git pull
 node report "$__stacksnode" -a > "$__publishdir"/"$__outputfile"
-node report "$__stacksnode" -j > "$__publishdir"/"$__outputjsonfile"
+node report "$__stacksnode" -j -l > "$__publishdir"/"$__outputjsonfile"
 
 # Build web page with stacks-dump data
 cd "$__publishdir" || exit
