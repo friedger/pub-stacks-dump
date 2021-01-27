@@ -23,12 +23,12 @@ __sleeptime="${1:-}"
 ## UPDATE VARIABLES BELOW FOR YOUR SYSTEM
 
 # directory for working_dir data from stacks-node
-__stacksnode="/tmp/stacks-testnet-7617d9e6195032fd/"
+__stacksnode="/tmp/stacks-testnet-a62544660377e1f2/"
 
 # directory for running stacks-dump
-__stacksdump="/home/friedger/_repos/github/psq/stacks-dump"
+__stacksdump="/home/ubuntu/stacks-dump"
 # directory for repo to publish results
-__publishdir="/home/friedger/_repos/github/friedger/pub-stacks-dump"
+__publishdir="/home/ubuntu/pub-stacks-dump"
 # file name for saving stacks-node data
 __outputfile="stacks-dump.txt"
 # file name for saving stacks-node data as json
@@ -144,9 +144,9 @@ EOF
 rm header.html
 
 # upload and publish via git
-git add .
-git commit -m "Published at: $__timestamp"
-git push origin main
+ git add .
+ git commit -m "Published at: $__timestamp"
+ git push origin main
 
 }
 
