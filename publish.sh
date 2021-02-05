@@ -33,6 +33,8 @@ __publishdir="/home/ubuntu/pub-stacks-dump"
 __outputfile="stacks-dump.txt"
 # file name for saving stacks-node data as json
 __outputjsonfile="stacks-dump.json"
+# file name for saving stacks-node data as csv
+__outputcsvfile="stacks-dump.csv"
 # website to access data after published
 __website="https://friedger.github.io/pub-stacks-dump/"
 # twitter account used for twitter card in SEO
@@ -59,8 +61,9 @@ function publish() {
 # Run stacks-dump and save output to file
 cd "$__stacksdump" || exit
 git pull
-node report "$__stacksnode" -a > "$__publishdir"/"$__outputfile"
+node report "$__stacksnode" -a -b -l > "$__publishdir"/"$__outputfile"
 node report "$__stacksnode" -j -l > "$__publishdir"/"$__outputjsonfile"
+node report "$__stacksnode" -c > "$__publishdir"/"$__outputcsvfile"
 
 # Build web page with stacks-dump data
 cd "$__publishdir" || exit
@@ -132,6 +135,7 @@ body {
   <p>A public view of statistics around the Stacks blockchain, published hourly using stacks-dump.</p>
   <p>Taken at: $__timestamp</p>
   <p>Read more at <a href="https://github.com/psq/stacks-dump">git repo for stacks-dump</a> and at <a href="https://github.com/friedger/pub-stacks-dump">git repo for pub-stacks-dump</a>.</p>
+  <p>Download the data in <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.csv">CSV</a>, <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.json">JSON</a>, or <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.txt">TXT</a> format.
 </div>
 <pre class="stacks-dump">
 EOF
