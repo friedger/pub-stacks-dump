@@ -135,7 +135,7 @@ body {
   <p>A public view of statistics around the Stacks blockchain, published hourly using stacks-dump.</p>
   <p>Taken at: $__timestamp</p>
   <p>Read more at <a href="https://github.com/psq/stacks-dump">git repo for stacks-dump</a> and at <a href="https://github.com/friedger/pub-stacks-dump">git repo for pub-stacks-dump</a>.</p>
-  <p>Download the data in <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.csv">CSV</a>, <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.json">JSON</a>, or <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.txt">TXT</a> format.
+  <p>Download the data in <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.csv" download>CSV</a>, <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.json" download>JSON</a>, or <a href="https://friedger.github.io/pub-stacks-dump/stacks-dump.txt" download>TXT</a> format.
 </div>
 <pre class="stacks-dump">
 EOF
