@@ -59,7 +59,7 @@ fi
 
 function publish() {
 # Get current block height
-BURN_BLOCK_HEIGHT=$(curl http://192.168.0.149:20443/v2/info 2> curl.log | jq '.burn_block_height')
+BURN_BLOCK_HEIGHT=$(curl http://localhost:20443/v2/info 2> curl.log | jq '.burn_block_height')
 START_HEIGHT=$((BURN_BLOCK_HEIGHT - 1000))
 # Run stacks-dump and save output to files
 cd "$__stacksdump" || exit
