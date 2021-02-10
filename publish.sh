@@ -23,7 +23,7 @@ __sleeptime="${1:-}"
 ## UPDATE VARIABLES BELOW FOR YOUR SYSTEM
 
 # directory for working_dir data from stacks-node
-__stacksnode="/tmp/stacks-testnet-a62544660377e1f2/"
+__stacksnode="/tmp/stacks-testnet-294b1d6c916222c3"
 
 # directory for running stacks-dump
 __stacksdump="/home/ubuntu/stacks-dump"
