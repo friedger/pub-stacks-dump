@@ -56,11 +56,13 @@ fi
 
 function publish() {
 
+BURN_BLOCK_HEIGHT=$(curl http://localhost:20443/v2/info 2> curl.log | jq '.burn_block_height')
+START_HEIGHT=$((BURN_BLOCK_HEIGHT - 1000))
 # Run stacks-dump and save output to file
 cd "$__stacksdump" || exit
 git pull
-node report "$__stacksnode" -a > "$__publishdir"/"$__outputfile"
-node report "$__stacksnode" -j -l > "$__publishdir"/"$__outputjsonfile"
+node report "$__stacksnode" -a -s $START_HEIGHT > "$__publishdir"/"$__outputfile"
+node report "$__stacksnode" -j -l -s $START_HEIGHT > "$__publishdir"/"$__outputjsonfile"
 
 # Build web page with stacks-dump data
 cd "$__publishdir" || exit

@@ -8,26 +8,26 @@ The information is published via GitHub pages and available at the link below:
 
 ## Requirements
 
-This script *should* run on any system that supports Bash. Please file an issue if you get an error.
+This script _should_ run on any system that supports Bash. Please file an issue if you get an error.
 
 This script expects that you have `git` installed and configured on your system.
 
-This script relies on [stacks-dump by psq](https://github.com/psq/stacks-dump) to review the stacks-node storage and output statistics based on the miner's data. The `stacks-dump` repository must be downloaded separately.
+This script relies on a fork of [stacks-dump by psq](https://github.com/psq/stacks-dump) to review the stacks-node storage and output statistics based on the miner's data. The `stacks-dump` repository must be downloaded separately.
 
 This script has a set of variables that need to be updated to match your system configuration:
 
 - directory for working_dir data from stacks-node
-`__stacksnode="/tmp/stacks-testnet-bb8423eafa69dc8f/"`
+  `__stacksnode="/tmp/stacks-testnet-bb8423eafa69dc8f/"`
 - directory for running stacks-dump
-`__stacksdump="/home/friedger/_repos/github/psq/stacks-dump"`
+  `__stacksdump="/home/friedger/_repos/github/psq/stacks-dump"`
 - directory for repo to publish results
-`__publishdir="/home/friedger/_repos/github/friedger/pub-stacks-dump"`
+  `__publishdir="/home/friedger/_repos/github/friedger/pub-stacks-dump"`
 - file name for saving stacks-node data
-`__outputfile="stacks-dump.txt"`
+  `__outputfile="stacks-dump.txt"`
 - website to access data after published
-`__website="https://friedger.github.io/pub-stacks-dump/"`
+  `__website="https://friedger.github.io/pub-stacks-dump/"`
 - twitter account used for twitter card in SEO
-`__twitter="@fmdroid"`
+  `__twitter="@fmdroid"`
 
 GitHub Pages is used for publishing, however instructions to set that up are outside the scope of this readme. Feel free to [review the GitHub documentation](https://docs.github.com/en/github/working-with-github-pages) or use the publishing platform of your choice.
 
