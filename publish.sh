@@ -23,16 +23,19 @@ __sleeptime="${1:-}"
 ## UPDATE VARIABLES BELOW FOR YOUR SYSTEM
 
 # directory for working_dir data from stacks-node
-__stacksnode="/tmp/stacks-testnet-a62544660377e1f2/"
-
+__stacksnode="/tmp/stacks-testnet-294b1d6c916222c3/"
 # directory for running stacks-dump
 __stacksdump="/home/ubuntu/stacks-dump"
 # directory for repo to publish results
 __publishdir="/home/ubuntu/pub-stacks-dump"
 # file name for saving stacks-node data
 __outputfile="stacks-dump.txt"
-# file name for saving stacks-node data as json
+# file name for saving summary stacks-node data as json
 __outputjsonfile="stacks-dump.json"
+# file name for saving stacks-node data as csv
+__outputcsvfile="stacks-dump.csv"
+# file name for saving stacks-node block data as txt
+__outputblocksfile="stacks-dump-blocks.txt"
 # website to access data after published
 __website="https://friedger.github.io/pub-stacks-dump/"
 # twitter account used for twitter card in SEO
@@ -55,14 +58,13 @@ elif [ ! -d "$__publishdir" ]; then
 fi
 
 function publish() {
-
-BURN_BLOCK_HEIGHT=$(curl http://localhost:20443/v2/info 2> curl.log | jq '.burn_block_height')
+# Get current block height
+BURN_BLOCK_HEIGHT=$(curl http://192.168.0.149:20443/v2/info 2> curl.log | jq '.burn_block_height')
 START_HEIGHT=$((BURN_BLOCK_HEIGHT - 1000))
-# Run stacks-dump and save output to file
+# Run stacks-dump and save output to files
 cd "$__stacksdump" || exit
 git pull
-node report "$__stacksnode" -a -s $START_HEIGHT > "$__publishdir"/"$__outputfile"
-node report "$__stacksnode" -j -l -s $START_HEIGHT > "$__publishdir"/"$__outputjsonfile"
+node report "$__stacksnode" -l -a -j "$__publishdir"/"$__outputjsonfile" -c "$__publishdir"/"$__outputcsvfile" --blocks-file  "$__publishdir"/"$__outputblocksfile" -s $START_HEIGHT > "$__publishdir"/"$__outputfile"
 
 # Build web page with stacks-dump data
 cd "$__publishdir" || exit
@@ -137,7 +139,13 @@ body {
 </div>
 <pre class="stacks-dump">
 EOF
-cat header.html "$__outputfile" > index.html
+cat header.html "$__outputfile" > part.html
+cat >> part.html <<EOF
+</pre>
+<pre class="stacks-dump">
+EOF
+tac "$__outputblocksfile" > rblocks.txt
+cat part.html rblocks.txt > index.html
 cat >> index.html <<EOF
 </pre>
 </body>
