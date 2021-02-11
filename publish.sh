@@ -40,7 +40,6 @@ __outputblocksfile="stacks-dump-blocks.txt"
 __website="https://friedger.github.io/pub-stacks-dump/"
 # twitter account used for twitter card in SEO
 __twitter="@fmdroid"
-
 # avg tx costs for commits in sats
 __avg_tx_costs=60000
 ##########
@@ -146,6 +145,7 @@ body {
   <p>Read more at <a href="https://github.com/psq/stacks-dump">git repo for stacks-dump</a> and at <a href="https://github.com/friedger/pub-stacks-dump">git repo for pub-stacks-dump</a>.</p>
   <p>sats/stx (from binance.com): $SATS_STX</p>
   <p>avg tx costs: $__avg_tx_costs</p>
+  <p>Links: <a href="stacks-dump.json">summary as json</a> <a href="stacks-dump.csv">miner stats as csv</a> <a href="stacks-dump-blocks.txt">block data as txt</a></p>
 </div>
 <pre class="stacks-dump">
 EOF
