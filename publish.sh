@@ -41,6 +41,8 @@ __website="https://friedger.github.io/pub-stacks-dump/"
 # twitter account used for twitter card in SEO
 __twitter="@fmdroid"
 
+# avg tx costs for commits in sats
+__avg_tx_costs=60000
 ##########
 # SCRIPT #
 ##########
@@ -61,10 +63,16 @@ function publish() {
 # Get current block height
 BURN_BLOCK_HEIGHT=$(curl http://localhost:20443/v2/info 2> curl.log | jq '.burn_block_height')
 START_HEIGHT=$((BURN_BLOCK_HEIGHT - 1000))
+
+# Get price
+BTC_STX_STRING=$(curl https://api.binance.com/api/v3/ticker/price?symbol=STXBTC 2> curl-binance.log | jq '.price' | tr -d \")
+SATS_STX_FLOAT=$(echo "$BTC_STX_STRING * 100000000" | bc -l)
+SATS_STX=${SATS_STX_FLOAT:0:-9}
+
 # Run stacks-dump and save output to files
 cd "$__stacksdump" || exit
 git pull
-node report "$__stacksnode" -l -a -j "$__publishdir"/"$__outputjsonfile" -c "$__publishdir"/"$__outputcsvfile" --blocks-file  "$__publishdir"/"$__outputblocksfile" -s $START_HEIGHT > "$__publishdir"/"$__outputfile"
+node report "$__stacksnode" -l -a -j "$__publishdir"/"$__outputjsonfile" -c "$__publishdir"/"$__outputcsvfile" --blocks-file  "$__publishdir"/"$__outputblocksfile" -s $START_HEIGHT --sats-stx $SATS_STX -z $__avg_tx_costs > "$__publishdir"/"$__outputfile"
 
 # Build web page with stacks-dump data
 cd "$__publishdir" || exit
@@ -136,6 +144,8 @@ body {
   <p>A public view of statistics around the Stacks blockchain, published hourly using stacks-dump.</p>
   <p>Taken at: $__timestamp</p>
   <p>Read more at <a href="https://github.com/psq/stacks-dump">git repo for stacks-dump</a> and at <a href="https://github.com/friedger/pub-stacks-dump">git repo for pub-stacks-dump</a>.</p>
+  <p>sats/stx (from binance.com): $SATS_STX</p>
+  <p>avg tx costs: $__avg_tx_costs</p>
 </div>
 <pre class="stacks-dump">
 EOF

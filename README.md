@@ -12,7 +12,7 @@ This script _should_ run on any system that supports Bash. Please file an issue 
 
 This script expects that you have `git` installed and configured on your system.
 
-This script relies on a fork of [stacks-dump by psq](https://github.com/psq/stacks-dump) to review the stacks-node storage and output statistics based on the miner's data. The `stacks-dump` repository must be downloaded separately.
+This script relies on (pub-stacks-dump fork](https://github.com/friedger/stacks-dump/tree/pub-stacks-dump) of [stacks-dump by psq](https://github.com/psq/stacks-dump) to review the stacks-node storage and output statistics based on the miner's data. The `stacks-dump` repository must be downloaded separately.
 
 This script has a set of variables that need to be updated to match your system configuration:
 
@@ -24,10 +24,18 @@ This script has a set of variables that need to be updated to match your system 
   `__publishdir="/home/friedger/_repos/github/friedger/pub-stacks-dump"`
 - file name for saving stacks-node data
   `__outputfile="stacks-dump.txt"`
+- file name for saving jsummary stacks-node data as json
+  `__outputjsonfile="stacks-dump.json"`
+- file name for saving miners stacks-node data as csv
+  `__outputcsvfile="stacks-dump.csv"`
+- file name for saving blocks stacks-node data as txt
+  `__outputcsvfile="stacks-dump-blocks.txt"`
 - website to access data after published
   `__website="https://friedger.github.io/pub-stacks-dump/"`
 - twitter account used for twitter card in SEO
   `__twitter="@fmdroid"`
+- average costs for commit transaction in sats
+  `__avg_tx_costs=60000`
 
 GitHub Pages is used for publishing, however instructions to set that up are outside the scope of this readme. Feel free to [review the GitHub documentation](https://docs.github.com/en/github/working-with-github-pages) or use the publishing platform of your choice.
 
