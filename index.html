@@ -63,47 +63,54 @@ body {
 <div class="header">
   <h1>Stacks Dump</h1>
   <p>A public view of statistics around the Stacks blockchain, published hourly using stacks-dump.</p>
-  <p>Taken at: 20210217-111551</p>
+  <p>Taken at: 20210217-122535</p>
   <p>Read more at <a href="https://github.com/psq/stacks-dump">git repo for stacks-dump</a> and at <a href="https://github.com/friedger/pub-stacks-dump">git repo for pub-stacks-dump</a>.</p>
-  <p>sats/stx (from binance.com): 1333</p>
+  <p>sats/stx (from binance.com): 1338</p>
   <p>avg tx costs: 60000</p>
   <p>Links: <a href="stacks-dump.json">summary as json</a> <a href="stacks-dump.csv">miner stats as csv</a> <a href="stacks-dump-blocks.txt">block data as txt</a></p>
 </div>
 <pre class="stacks-dump">
+>>> WARNING: there are currently 2 forks of equal length suitable to continue as the canonical fork
 ┌─┬─────────────────────────────────────────┬──────────────────────────────────┬────────────┬──────┬──────┬──────┬───────────┬───────┬──────┬──────────┬──────────┬──────────┬─────────┬───────────┬──────┐
 │ │                              STX address│                       BTC address│actual wins/│actual│ won %│ theo.│       paid│average│  last│   rewards│   matured│   pending│ share of│       est.│  est.│
 │ │                                         │                                  │ total wins/│ win %│      │ win %│   satoshis│   paid│  paid│          │   rewards│   rewards│ pending │     profit│ price│
 │ │                                         │                                  │ total mined│      │      │      │           │       │      │          │          │          │rewards %│       sats│      │
-│ │SP105ARDW7EQTFTFMYNGMKJTA9JYFHF0FFMW9K815│16sAXi1jxhxKCfY84hubDdnFNaAhqd5t49│   15/22/288│ 1.78%│ 7.64%│ 4.58%│ 28,800,000│ 100000│100000│ 41,928.80│ 41,928.80│          │         │  9,811,090│ 1,099│
-│$│ SP136M14ZZX54A3R7AABEHJMN36DHBTY3BQAJA6H│ 1CdpgKRiVKrxCnjeVVt7VAEcrSUuX2ZHC│   16/16/111│ 1.89%│14.41%│19.76%│ 49,950,000│ 450000│450000│ 39,462.40│  2,466.40│ 36,996.00│    14.42│ -4,006,621│ 1,435│
-│$│SP137NZXD0BM4DM875ZH2HGDNPEBP6KW18RFXQ9W3│17RfeXjpSQzqWrsEXd71eVWP4d28t1wKis│ 230/264/881│27.22%│29.97%│25.36%│478,905,000│ 543593│475000│614,133.60│552,473.60│ 61,660.00│    24.04│286,875,089│   866│
-│ │SP1KQXKAHW6HCMYJ1BP2NXZF3RVTC6DXPMG6CVVSD│1ASEW7rDjPR131SD96iPvRXRAzTsQ1Nd3V│ 137/141/604│16.21%│23.34%│23.95%│336,709,416│ 557466│250000│379,825.60│379,825.60│          │         │133,358,109│   982│
-│ │SP1PYG1ZEVX0VH8TTMZFEPZYTA8WRFY5H414ED9YZ│1B28chuS1TghjhtRyCcP7Z91zKtWqMb3rD│   56/60/444│ 6.63%│13.51%│16.32%│182,040,000│ 410000│410000│160,316.00│160,316.00│          │         │  5,021,228│ 1,302│
-│$│SP1RJH1641855357CXFBF1H2WFWASXDX4DZ79QH1P│1BKKtxfH8ouwuQGeSS9XUzUNQS9hknSrQp│   68/72/733│ 8.05%│ 9.82%│ 8.82%│146,600,000│ 200000│200000│187,446.40│165,248.80│ 22,197.60│     8.65│ 59,286,051│ 1,017│
-│ │ SP27B9R2KJVCAGTA3W3G42H1HCZ94VQ39GVVVAWE│ 1QaeQ6hWtBHmKYRrYFpZnFVNC5RprzUHQ│      2/2/53│ 0.24%│ 3.77%│ 9.84%│ 10,600,000│ 200000│200000│  4,932.80│  2,466.40│  2,466.40│     0.96│ -7,204,578│ 2,794│
-│ │SP2R0VR6CFDF533VX3S1XDSFCQN9E1K8C5WS5Q9JC│1H3tZ2nmW1bTs7qRYS4xUZwaSa3zm614zg│   16/18/170│ 1.89%│10.59%│15.76%│ 63,900,000│ 375882│400000│ 49,328.00│ 36,996.00│ 12,332.00│     4.81│ -8,345,776│ 1,502│
-│$│SP3S9C931DEC0NZWEQBPCW6HGMN8T0TJHED5YDG5S│1P7gPUpu8iKSFvzBJPUBz4YinsBYA7CFTM│      6/6/63│ 0.71%│ 9.52%│12.36%│ 23,065,000│ 366111│325000│ 14,798.40│  2,466.40│ 12,332.00│     4.81│ -7,118,733│ 1,814│
-│ │ SPAZ7Y7BMMSRZE051KSV8MXB2HWF27RRM8Y43SWK│1315TXQPkpBPc5nVAAQtGdvuKyVrRKTteJ│      1/1/69│ 0.12%│ 1.45%│12.29%│ 21,150,000│ 306522│250000│  2,466.40│  2,466.40│          │         │-22,002,289│10,254│
-│$│ SPP1DJ1JE2V8HYHTRHPWD7603XHJ3F7421KBC4TE│15282N4BYEwYh3j1dTgJu64Ey5qWn9Po9F│ 298/313/868│35.27%│36.06%│30.60%│575,195,000│ 662667│707000│796,647.20│688,125.60│108,521.60│    42.31│434,655,718│   787│
+│ │SP105ARDW7EQTFTFMYNGMKJTA9JYFHF0FFMW9K815│16sAXi1jxhxKCfY84hubDdnFNaAhqd5t49│   15/22/288│ 1.78%│ 7.64%│ 4.58%│ 28,800,000│ 100000│100000│ 41,928.80│ 41,928.80│          │         │ 10,020,734│ 1,099│
+│$│ SP136M14ZZX54A3R7AABEHJMN36DHBTY3BQAJA6H│ 1CdpgKRiVKrxCnjeVVt7VAEcrSUuX2ZHC│   16/16/115│ 1.90%│13.91%│19.79%│ 51,750,000│ 450000│450000│ 39,462.40│  4,932.80│ 34,529.60│    13.46│ -5,849,309│ 1,486│
+│$│SP137NZXD0BM4DM875ZH2HGDNPEBP6KW18RFXQ9W3│17RfeXjpSQzqWrsEXd71eVWP4d28t1wKis│ 230/264/881│27.25%│29.97%│25.31%│478,280,000│ 542883│475000│614,133.60│554,940.00│ 59,193.60│    23.08│290,570,757│   865│
+│ │SP1KQXKAHW6HCMYJ1BP2NXZF3RVTC6DXPMG6CVVSD│1ASEW7rDjPR131SD96iPvRXRAzTsQ1Nd3V│ 136/140/600│16.11%│23.33%│23.92%│334,269,416│ 557116│250000│377,359.20│377,359.20│          │         │134,637,194│   981│
+│ │SP1PYG1ZEVX0VH8TTMZFEPZYTA8WRFY5H414ED9YZ│1B28chuS1TghjhtRyCcP7Z91zKtWqMb3rD│   56/60/444│ 6.64%│13.51%│16.32%│182,040,000│ 410000│410000│160,316.00│160,316.00│          │         │  5,822,808│ 1,302│
+│$│SP1RJH1641855357CXFBF1H2WFWASXDX4DZ79QH1P│1BKKtxfH8ouwuQGeSS9XUzUNQS9hknSrQp│   68/72/733│ 8.06%│ 9.82%│ 8.81%│146,600,000│ 200000│200000│187,446.40│165,248.80│ 22,197.60│     8.65│ 60,223,283│ 1,017│
+│ │ SP27B9R2KJVCAGTA3W3G42H1HCZ94VQ39GVVVAWE│ 1QaeQ6hWtBHmKYRrYFpZnFVNC5RprzUHQ│      2/2/53│ 0.24%│ 3.77%│ 9.84%│ 10,600,000│ 200000│200000│  4,932.80│  2,466.40│  2,466.40│     0.96│ -7,179,914│ 2,794│
+│ │SP2R0VR6CFDF533VX3S1XDSFCQN9E1K8C5WS5Q9JC│1H3tZ2nmW1bTs7qRYS4xUZwaSa3zm614zg│   16/18/170│ 1.90%│10.59%│15.76%│ 63,900,000│ 375882│400000│ 49,328.00│ 36,996.00│ 12,332.00│     4.81│ -8,099,136│ 1,502│
+│$│SP3S9C931DEC0NZWEQBPCW6HGMN8T0TJHED5YDG5S│1P7gPUpu8iKSFvzBJPUBz4YinsBYA7CFTM│      6/6/67│ 0.71%│ 8.96%│12.48%│ 24,365,000│ 363657│325000│ 14,798.40│  2,466.40│ 12,332.00│     4.81│ -8,584,741│ 1,918│
+│ │ SPAZ7Y7BMMSRZE051KSV8MXB2HWF27RRM8Y43SWK│1315TXQPkpBPc5nVAAQtGdvuKyVrRKTteJ│      1/1/69│ 0.12%│ 1.45%│12.29%│ 21,150,000│ 306522│250000│  2,466.40│  2,466.40│          │         │-21,989,957│10,254│
+│$│ SPP1DJ1JE2V8HYHTRHPWD7603XHJ3F7421KBC4TE│15282N4BYEwYh3j1dTgJu64Ey5qWn9Po9F│ 298/313/868│35.31%│36.06%│30.61%│575,700,000│ 663249│707000│796,647.20│683,192.80│113,454.40│    44.23│438,133,954│   788│
 └─┴─────────────────────────────────────────┴──────────────────────────────────┴────────────┴──────┴──────┴──────┴───────────┴───────┴──────┴──────────┴──────────┴──────────┴─────────┴───────────┴──────┘
 Statistics ========================================================================================================================
-total commit (last block): 2,157,000 sats
-block reward (last block): 2,466.40 STX
-miners (last block): 5
+total commit (last block): 0 sats
+block reward (last block): 0.00 STX
+miners (last block): 0
 miners (overall): 75
 
-since block 669971
+since block 669977
 miners: 13
 miners (won rewards): 11
 btc blocks: 1001
-empty btc blocks: 86
-actual_win_total: 845
+empty btc blocks: 87
+actual_win_total: 844
 orphaned blocks: 66
 incorrect blocks: 4
-price sats/stx 1333
+price sats/stx 1338
 avg. tx costs: 60000
 </pre>
 <pre class="stacks-dump">
+670977 ?    -            -         -                     -            -            -            -                   -                     
+670976 2 670974 4009> 2,466.40 1,182,000 528 br335 s:7468dd395a p:876c227535 c:198e161812 i:6b7ec56247 b:0000000000000000000002625     [40.2]SP137NZXD0 [59.8]SPP1DJ1JE2* 
+670975 1 670974 4009  2,466.40 2,157,000 996 br329 s:4ef11668a9 p:876c227535 c:31cd0d3f8d i:7ecd6f4bc1 b:0000000000000000000b96de5 @+  [20.9]SP136M14ZZ [22.0]SP137NZXD0*[9.3]SP1RJH1641 [15.1]SP3S9C931D [32.8]SPP1DJ1JE2  
+670974 1 670973 4008> 2,466.40 2,157,000 996 br329 s:876c227535 p:9fee3a556d c:255411505a i:45de830020 b:0000000000000000000d1d336 @@  [20.9]SP136M14ZZ [22.0]SP137NZXD0*[9.3]SP1RJH1641 [15.1]SP3S9C931D [32.8]SPP1DJ1JE2  
+670973 1 670972 4007> 2,466.40 2,157,000 996 br329 s:9fee3a556d p:56a725da2d c:a242ce6858 i:d72c390249 b:0000000000000000000d0a5c2 @+  [20.9]SP136M14ZZ [22.0]SP137NZXD0 [9.3]SP1RJH1641 [15.1]SP3S9C931D [32.8]SPP1DJ1JE2* 
+670972 1 670971 4006> 2,466.40 2,157,000 996 br329 s:56a725da2d p:f4b0001927 c:fd6a46aaaf i:e14bcaf1f9 b:0000000000000000000a45001 @+  [20.9]SP136M14ZZ [22.0]SP137NZXD0 [9.3]SP1RJH1641 [15.1]SP3S9C931D [32.8]SPP1DJ1JE2* 
 670971 1 670970 4005> 2,466.40 2,157,000 996 br329 s:f4b0001927 p:41be65c832 c:627a33fef4 i:10c659c9a4 b:000000000000000000033dc59 @+  [20.9]SP136M14ZZ [22.0]SP137NZXD0 [9.3]SP1RJH1641 [15.1]SP3S9C931D [32.8]SPP1DJ1JE2* 
 670970 1 670969 4004> 2,466.40 2,157,000 996 br329 s:41be65c832 p:c6951ad558 c:d86b2d9f4a i:e2162035bb b:00000000000000000008d8ba2 @@  [20.9]SP136M14ZZ [22.0]SP137NZXD0 [9.3]SP1RJH1641 [15.1]SP3S9C931D [32.8]SPP1DJ1JE2* 
 670969 1 670968 4003> 2,466.40 1,957,000 891 br329 s:c6951ad558 p:1c67ad4c3b c:472e019795 i:7b273d0c91 b:000000000000000000001610b @@  [23.0]SP136M14ZZ [24.3]SP137NZXD0 [16.6]SP3S9C931D*[36.1]SPP1DJ1JE2  
@@ -1098,13 +1105,7 @@ avg. tx costs: 60000
 669980 1 669979 3168> 2,466.40 2,016,000 915 br267 s:b82fbbfe79 p:5e0f69e816 c:5574d6fbac i:f5c45104d9 b:000000000000000000000a07f @@  [29.8]SP137NZXD0 [30.3]SP1KQXKAHW [9.9]SP1RJH1641 [30.1]SPP1DJ1JE2* 
 669979 2 669977 3167> 4,932.80 1,410,000 322 br267 s:5e0f69e816 p:b0ffd07b45 c:72186c2eec i:c250e35c15 b:00000000000000000003130fd     [42.6]SP137NZXD0*[43.3]SP1KQXKAHW [14.2]SP1RJH1641  
 669978 ?    -            -         -                     -            -            -            -                   -                     
-669977 1 669976 3166> 2,466.40 2,016,000 915 br267 s:b0ffd07b45 p:f04ec3c89a c:59d13d4ad2 i:57391e6e04 b:00000000000000000000a3823 @+  [29.8]SP137NZXD0*[30.3]SP1KQXKAHW [9.9]SP1RJH1641 [30.1]SPP1DJ1JE2  
-669976 1 669975 3165> 2,466.40 2,016,000 915 br267 s:f04ec3c89a p:d7147d2819 c:695fa68553 i:6a77038270 b:00000000000000000007794c8 @@  [29.8]SP137NZXD0*[30.3]SP1KQXKAHW [9.9]SP1RJH1641 [30.1]SPP1DJ1JE2  
-669975 1 669974 3164> 2,466.40 2,016,000 915 br267 s:d7147d2819 p:5e30a8cc90 c:610ca39939 i:07fafd466b b:0000000000000000000c1c0ff @@  [29.8]SP137NZXD0 [30.3]SP1KQXKAHW*[9.9]SP1RJH1641 [30.1]SPP1DJ1JE2  
-669974 2 669972 3163> 2,466.40 2,016,000 915 br267 s:5e30a8cc90 p:6f8554a701 c:e22212ed9c i:4b87bb22d2 b:0000000000000000000693c5f     [29.8]SP137NZXD0 [30.3]SP1KQXKAHW [9.9]SP1RJH1641 [30.1]SPP1DJ1JE2* 
-669973 2 669971 3162  2,466.40 600,000 268 br271 s:0d41e9b8c8 p:52318671e5 c:0d8d1e8c51 i:fa64b54940 b:00000000000000000007a606c     [100.0]SP137NZXD0* 
-669972 1 669971 3162> 2,466.40 606,000 270 br267 s:6f8554a701 p:52318671e5 c:c3fdd628cf i:43fe82314b b:0000000000000000000446166 @+  [100.0]SPP1DJ1JE2* 
-669971 1 669970 3161> 2,466.40 2,016,000 915 br267 s:52318671e5 p:09f8529af2 c:548bf6dfb7 i:cb002820fc b:000000000000000000006c53a     [29.8]SP137NZXD0 [30.3]SP1KQXKAHW [9.9]SP1RJH1641 [30.1]SPP1DJ1JE2* 
+669977 1 669976 3166> 2,466.40 2,016,000 915 br267 s:b0ffd07b45 p:f04ec3c89a c:59d13d4ad2 i:57391e6e04 b:00000000000000000000a3823     [29.8]SP137NZXD0*[30.3]SP1KQXKAHW [9.9]SP1RJH1641 [30.1]SPP1DJ1JE2  
 </pre>
 </body>
 </html>
