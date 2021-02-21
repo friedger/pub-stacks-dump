@@ -2,30 +2,30 @@
 │ │                              STX address│                       BTC address│actual wins/│actual│ won %│ theo.│       paid│average│  last│   rewards│   matured│   pending│ share of│       est.│ est.│
 │ │                                         │                                  │ total wins/│ win %│      │ win %│   satoshis│   paid│  paid│          │   rewards│   rewards│ pending │     profit│price│
 │ │                                         │                                  │ total mined│      │      │      │           │       │      │          │          │          │rewards %│       sats│     │
-│ │SP105ARDW7EQTFTFMYNGMKJTA9JYFHF0FFMW9K815│16sAXi1jxhxKCfY84hubDdnFNaAhqd5t49│   15/21/248│ 1.79%│ 8.47%│ 4.63%│ 24,800,000│ 100000│100000│ 41,928.80│ 41,928.80│          │         │ 27,531,866│  946│
-│$│ SP136M14ZZX54A3R7AABEHJMN36DHBTY3BQAJA6H│ 1CdpgKRiVKrxCnjeVVt7VAEcrSUuX2ZHC│   51/52/340│ 6.10%│15.29%│19.23%│153,000,000│ 450000│450000│135,652.00│101,122.40│ 34,529.60│    12.61│ 44,050,156│1,278│
-│$│SP137NZXD0BM4DM875ZH2HGDNPEBP6KW18RFXQ9W3│17RfeXjpSQzqWrsEXd71eVWP4d28t1wKis│ 216/244/841│25.84%│29.01%│24.19%│443,200,000│ 526992│700000│564,805.60│495,746.40│ 69,059.20│    25.23│411,723,377│  874│
-│ │SP1KQXKAHW6HCMYJ1BP2NXZF3RVTC6DXPMG6CVVSD│1ASEW7rDjPR131SD96iPvRXRAzTsQ1Nd3V│   73/78/552│ 8.73%│14.13%│19.76%│260,589,430│ 472082│333334│212,110.40│192,379.20│ 19,731.20│     7.21│ 46,303,541│1,385│
-│ │SP1PYG1ZEVX0VH8TTMZFEPZYTA8WRFY5H414ED9YZ│1B28chuS1TghjhtRyCcP7Z91zKtWqMb3rD│   27/31/270│ 3.23%│11.48%│15.52%│110,700,000│ 410000│410000│ 88,790.40│ 88,790.40│          │         │ 15,431,011│1,429│
-│$│SP1RJH1641855357CXFBF1H2WFWASXDX4DZ79QH1P│1BKKtxfH8ouwuQGeSS9XUzUNQS9hknSrQp│   82/86/771│ 9.81%│11.15%│ 8.78%│154,200,000│ 200000│200000│224,442.40│194,845.60│ 29,596.80│    10.81│159,321,167│  893│
-│ │ SP27B9R2KJVCAGTA3W3G42H1HCZ94VQ39GVVVAWE│ 1QaeQ6hWtBHmKYRrYFpZnFVNC5RprzUHQ│      2/2/53│ 0.24%│ 3.77%│ 9.84%│ 10,600,000│ 200000│200000│  4,932.80│  4,932.80│          │         │ -5,872,722│2,794│
-│ │SP2R0VR6CFDF533VX3S1XDSFCQN9E1K8C5WS5Q9JC│1H3tZ2nmW1bTs7qRYS4xUZwaSa3zm614zg│   35/38/261│ 4.19%│14.56%│16.16%│100,300,000│ 384291│400000│101,122.40│ 81,391.20│ 19,731.20│     7.21│ 46,139,207│1,147│
-│ │SP3S9C931DEC0NZWEQBPCW6HGMN8T0TJHED5YDG5S│1P7gPUpu8iKSFvzBJPUBz4YinsBYA7CFTM│   13/15/206│ 1.56%│ 7.28%│13.35%│ 69,540,000│ 337573│325000│ 34,529.60│ 34,529.60│          │         │-26,549,051│2,372│
-│$│ SPP1DJ1JE2V8HYHTRHPWD7603XHJ3F7421KBC4TE│15282N4BYEwYh3j1dTgJu64Ey5qWn9Po9F│ 322/337/850│38.52%│39.65%│31.49%│588,022,000│ 691791│707000│880,504.80│779,382.40│101,122.40│    36.94│772,427,194│  726│
+│ │SP105ARDW7EQTFTFMYNGMKJTA9JYFHF0FFMW9K815│16sAXi1jxhxKCfY84hubDdnFNaAhqd5t49│      2/2/19│ 0.24%│10.53%│ 4.52%│  1,900,000│ 100000│100000│  4,932.80│  4,932.80│          │         │  3,791,928│  616│
+│$│ SP136M14ZZX54A3R7AABEHJMN36DHBTY3BQAJA6H│ 1CdpgKRiVKrxCnjeVVt7VAEcrSUuX2ZHC│   94/98/559│11.30%│17.53%│19.85%│251,550,000│ 450000│450000│261,438.40│207,177.60│ 54,260.80│    19.30│ 77,002,184│1,090│
+│$│SP137NZXD0BM4DM875ZH2HGDNPEBP6KW18RFXQ9W3│17RfeXjpSQzqWrsEXd71eVWP4d28t1wKis│ 210/237/834│25.24%│28.42%│25.42%│457,350,000│ 548381│700000│550,007.20│493,280.00│ 56,727.20│    20.18│254,369,972│  923│
+│ │SP1KQXKAHW6HCMYJ1BP2NXZF3RVTC6DXPMG6CVVSD│1ASEW7rDjPR131SD96iPvRXRAzTsQ1Nd3V│   45/50/545│ 5.41%│ 9.17%│13.50%│170,795,878│ 313387│ 33332│133,185.60│133,185.60│          │         │-19,033,822│1,528│
+│ │SP1PYG1ZEVX0VH8TTMZFEPZYTA8WRFY5H414ED9YZ│1B28chuS1TghjhtRyCcP7Z91zKtWqMb3rD│     8/11/84│ 0.96%│13.10%│12.86%│ 34,440,000│ 410000│410000│ 34,529.60│ 34,529.60│          │         │  8,343,496│1,143│
+│$│SP1RJH1641855357CXFBF1H2WFWASXDX4DZ79QH1P│1BKKtxfH8ouwuQGeSS9XUzUNQS9hknSrQp│   82/86/785│ 9.86%│10.96%│ 8.96%│157,000,000│ 200000│200000│234,308.00│204,711.20│ 29,596.80│    10.53│120,416,580│  871│
+│ │ SP27B9R2KJVCAGTA3W3G42H1HCZ94VQ39GVVVAWE│ 1QaeQ6hWtBHmKYRrYFpZnFVNC5RprzUHQ│      2/2/53│ 0.24%│ 3.77%│ 9.84%│ 10,600,000│ 200000│200000│  4,932.80│  4,932.80│          │         │ -6,948,072│2,794│
+│ │SP2R0VR6CFDF533VX3S1XDSFCQN9E1K8C5WS5Q9JC│1H3tZ2nmW1bTs7qRYS4xUZwaSa3zm614zg│   48/55/361│ 5.77%│15.24%│17.66%│148,300,000│ 410803│500000│138,118.40│125,786.40│ 12,332.00│     4.39│ 21,333,984│1,231│
+│ │SP3S9C931DEC0NZWEQBPCW6HGMN8T0TJHED5YDG5S│1P7gPUpu8iKSFvzBJPUBz4YinsBYA7CFTM│   13/15/206│ 1.56%│ 7.28%│13.35%│ 69,540,000│ 337573│325000│ 34,529.60│ 34,529.60│          │         │-34,076,504│2,372│
+│$│ SPP1DJ1JE2V8HYHTRHPWD7603XHJ3F7421KBC4TE│15282N4BYEwYh3j1dTgJu64Ey5qWn9Po9F│ 328/340/836│39.42%│40.67%│32.35%│591,052,000│ 707000│707000│902,702.40│774,449.60│128,252.80│    45.61│609,030,824│  710│
 └─┴─────────────────────────────────────────┴──────────────────────────────────┴────────────┴──────┴──────┴──────┴───────────┴───────┴──────┴──────────┴──────────┴──────────┴─────────┴───────────┴─────┘
 Statistics ========================================================================================================================
-total commit (last block): 2,057,000 sats
+total commit (last block): 0 sats
 block reward (last block): 0.00 STX
-miners (last block): 4
+miners (last block): 0
 miners (overall): 75
 
-since block 670266
-miners: 13
+since block 670540
+miners: 10
 miners (won rewards): 10
 btc blocks: 1001
-empty btc blocks: 97
-actual_win_total: 836
-orphaned blocks: 63
-incorrect blocks: 5
-price sats/stx 1603
+empty btc blocks: 105
+actual_win_total: 832
+orphaned blocks: 62
+incorrect blocks: 2
+price sats/stx 1385
 avg. tx costs: 60000
